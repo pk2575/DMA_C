@@ -12,6 +12,12 @@ int main()
 
     int *num_ary = (int*)calloc(size, sizeof(int));
 
+    if (num_ary == NULL)
+    {
+        printf("Memory not allocated.");
+        exit(1);
+    }
+
     for(int i=0; i<size;i++)
     {
         printf("Enter ary[%d] : ",i);
